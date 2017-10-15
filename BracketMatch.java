@@ -35,7 +35,7 @@ public class BracketMatch {
 
                 char peekchar = stack.peek();
                 int closeIndex = close.indexOf(current);
-                if(open.get(closeIndex) != peekchar){
+                if(open.get(closeIndex) != peekchar){//if the index of open bracket is not same as close bracket, not match
                     return false;
                 } else {
                     stack.pop();
