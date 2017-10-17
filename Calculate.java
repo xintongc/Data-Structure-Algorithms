@@ -13,7 +13,7 @@ public class Cal {
 
 
     public int calculate(String string){
-
+//using map instead of swich
         Map<Character, Integer> opePriorities = new HashMap<Character, Integer>();
         opePriorities.put('*', 2);
         opePriorities.put('/',2);
