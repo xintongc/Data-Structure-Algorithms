@@ -11,7 +11,7 @@ import java.util.Stack;
 public class BracketMatch {
 
     public boolean isValid(String string){
-
+//creat 2 arraylist, one stores open bracket, one stores close bracket
         Stack<Character> stack = new Stack<Character>();
         ArrayList<Character> open = new ArrayList<>();
         open.add('(');
