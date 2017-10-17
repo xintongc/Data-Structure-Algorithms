@@ -30,7 +30,7 @@ public class BracketMatch {
                 stack.push(current);
 
             } else if (stack.size() == 0) {
-                return false;
+                return false;//if a close bracket comes but the stack already empty, then it is false
             } else if (close.contains(current)) {
 
                 char peekchar = stack.peek();
