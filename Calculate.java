@@ -54,7 +54,7 @@ public class Cal {
 
                 int num2 = num.pop();
                 int num1 = num.pop();
-                int result = cal2Num(num1,ope.pop(),num2);   //????
+                int result = cal2Num(num1,ope.pop(),num2);   
                 num.push(result);
             }
             ope.push(current2);
