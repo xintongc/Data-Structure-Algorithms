@@ -69,7 +69,7 @@ public static void findAbsoluteValue(int a[], int value){
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {//use 3 different method to solve this problem
         int a[] = {13, 1,-8, 21, 0, 9,-54, 17, 31, 81,-46};
         findAbsoluteValue(a,8);
     }
