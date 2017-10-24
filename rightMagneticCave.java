@@ -23,3 +23,36 @@
     }
     
     
+    public static boolean rightMagneticCave(int a[]){
+
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        for (int i:a) {
+            arrayList.add(i);
+        }
+
+        int repeat[] = new int[a.length];
+        int position = 0;
+        while(true){
+            int moves = Math.round(a[position]/2);
+            if(position + moves < arrayList.size()){
+                repeat[position + moves]++;
+                position = position + moves;
+            } else if(position - moves >= 0){
+                repeat[position - moves]++;
+                position = position - moves;
+            } else {
+                return false;
+            }
+
+            if (position == arrayList.size()-1){
+                return true;
+            }
+
+            for (int r:repeat) {
+                if(r > 1){
+                    return false;
+                }
+            }
+
+        }
+    }
