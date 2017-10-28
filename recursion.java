@@ -94,3 +94,11 @@ public static int linearSum(int[] A, int n){
         }
         return isPrime(n,div - 1);
     }
+
+
+    public static void printBinary(int n){
+        if (n/2 != 0){
+            printBinary(n/2);
+        }
+        System.out.print(n%2);
+    }
