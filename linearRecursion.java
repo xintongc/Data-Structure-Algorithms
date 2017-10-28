@@ -35,3 +35,53 @@ public static int linearSum(int[] A, int n){
             return y * y * x;
         }
     }
+
+
+    public static int product(int n, int m){
+        if(m == 1){
+            return n;
+        }else if (m == -1){
+            return -n;
+        } else if (m > 0){
+            return product(n, m-1) + n;
+        }else{
+            return product(n, m+1) - n;
+        }
+    }
+
+    public static int maximum(int[] A, int n){
+        if(n == 0){
+            return A[0];
+        }else {
+            return Math.max(maximum(A, n-1), A[n-1]);
+        }
+    }
+
+    public static int findRepeat(int[]A, int n){
+
+        if(A[n] == A[n + 1]){
+            return A[n];
+        }else if(n == A.length - 1){
+            return -1;
+        }else {
+            return findRepeat(A,n+1);
+        }
+    }
+
+    public static int greatestCommonDivisor(int a, int b){
+        if (b==0)
+            return a;
+        else
+            return greatestCommonDivisor(b, a % b);
+
+    }
+
+    public static boolean isPrime(int n, int div){
+        if(div <= 1){
+            return true;
+        }
+        if(n % div == 0){
+            return false;
+        }
+        return isPrime(n,div - 1);
+    }
