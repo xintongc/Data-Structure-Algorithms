@@ -36,6 +36,15 @@ public static int linearSum(int[] A, int n){
         }
     }
 
+    public static int binarySum(int A[], int i, int n){
+        if(n == 1){
+            return A[i];
+        }else if(n%2 == 0){
+            return binarySum(A,i,n/2) + binarySum(A,i + n/2, n/2);
+        }else {
+            return binarySum(A,i,n/2) + binarySum(A,i + n/2, n/2) + A[i + n/2 + 1];
+        }
+    }
 
     public static int product(int n, int m){
         if(m == 1){
